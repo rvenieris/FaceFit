@@ -18,6 +18,7 @@
 		BB2C8FE62732C05400A8B0E1 /* FaceFitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FE52732C05400A8B0E1 /* FaceFitUITestsLaunchTests.swift */; };
 		BB2C8FF32732C9A600A8B0E1 /* ArFaceExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FF22732C9A600A8B0E1 /* ArFaceExercise.swift */; };
 		BB2C8FF52733B38500A8B0E1 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */; };
+		BBA100FD273909CF0024978D /* JustMeshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA100FC273909CF0024978D /* JustMeshViewController.swift */; };
 		BBF42CA52734D5B80076308E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF42CA42734D5B80076308E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		BB2C8FE52732C05400A8B0E1 /* FaceFitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB2C8FF22732C9A600A8B0E1 /* ArFaceExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArFaceExercise.swift; sourceTree = "<group>"; };
 		BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		BBA100FC273909CF0024978D /* JustMeshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustMeshViewController.swift; sourceTree = "<group>"; };
 		BBF42CA42734D5B80076308E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				BB2C8FC42732C05100A8B0E1 /* SceneDelegate.swift */,
 				BB2C8FC62732C05100A8B0E1 /* ViewController.swift */,
 				BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */,
+				BBA100FC273909CF0024978D /* JustMeshViewController.swift */,
 				BB2C8FF22732C9A600A8B0E1 /* ArFaceExercise.swift */,
 				BB2C8FC82732C05100A8B0E1 /* Main.storyboard */,
 				BB2C8FCB2732C05300A8B0E1 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2C8FC72732C05100A8B0E1 /* ViewController.swift in Sources */,
+				BBA100FD273909CF0024978D /* JustMeshViewController.swift in Sources */,
 				BBF42CA52734D5B80076308E /* Extensions.swift in Sources */,
 				BB2C8FF52733B38500A8B0E1 /* ExerciseViewController.swift in Sources */,
 				BB2C8FF32732C9A600A8B0E1 /* ArFaceExercise.swift in Sources */,
@@ -454,9 +458,11 @@
 				DEVELOPMENT_TEAM = 67AYPRFZH8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceFit/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "I need access to your camera in order to track your face.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -464,7 +470,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "puc-rio.FaceFit";
+				PRODUCT_BUNDLE_IDENTIFIER = "facefit.academy.puc-rio.br";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -482,9 +488,11 @@
 				DEVELOPMENT_TEAM = 67AYPRFZH8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceFit/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "I need access to your camera in order to track your face.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -492,7 +500,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "puc-rio.FaceFit";
+				PRODUCT_BUNDLE_IDENTIFIER = "facefit.academy.puc-rio.br";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -17,8 +17,6 @@ struct FaceFitArRoutine {
                                                   rounds: 2)
     
     
-    
-    
     var name:String
     let exercises:[FaceFitArExercise]
     let rounds:Int
@@ -194,11 +192,11 @@ class FaceFitArMovement {
     // L & R Switched due to match ARFaceAnchor.BlendShape Values
     static let eyeBlink_L   = FaceFitArMovement(blendShape: .eyeBlinkRight  , bottonValue: 0.55, name: "Eye Wink Left")
     static let mouthSmile_L = FaceFitArMovement(blendShape: .mouthSmileRight, bottonValue: 0.35, name: "Mouth Smile Left")
-    static let browDown_L   = FaceFitArMovement(blendShape: .browDownLeft   , bottonValue: 0.50, name: "Brown Down Left")
+    static let browDown_L   = FaceFitArMovement(blendShape: .browDownLeft   , bottonValue: 0.50, name: "Brow Down Left")
     static let eyeBlink_R   = FaceFitArMovement(blendShape: .eyeBlinkLeft   , bottonValue: 0.55, name: "Eye Wink Right")
     static let mouthSmile_R = FaceFitArMovement(blendShape: .mouthSmileLeft , bottonValue: 0.35, name: "Mouth Smile Right")
-    static let browDown_R   = FaceFitArMovement(blendShape: .browDownRight  , bottonValue: 0.50, name: "Brown Down Right")
-    static let browInnerUp  = FaceFitArMovement(blendShape: .browInnerUp    , bottonValue: 0.50, name: "Brown Up")
+    static let browDown_R   = FaceFitArMovement(blendShape: .browDownRight  , bottonValue: 0.50, name: "Brow Down Right")
+    static let browInnerUp  = FaceFitArMovement(blendShape: .browInnerUp    , bottonValue: 0.50, name: "Brow Up")
     static let cheekPuff    = FaceFitArMovement(blendShape: .cheekPuff      , bottonValue: 0.80, name: "Cheek Puff")
     static let jawOpen      = FaceFitArMovement(blendShape: .jawOpen        , bottonValue: 0.70, name: "Jaw Open")
     static let mouthPucker  = FaceFitArMovement(blendShape: .mouthPucker    , bottonValue: 0.80, name: "Mouth Pucker")
@@ -211,6 +209,7 @@ extension Dictionary where Key == ARFaceAnchor.BlendShapeLocation, Value: NSNumb
         movements.reduce(true, {a, b in
             b.isExecuting(for: self[b.blendShape]) && a // Keep a as last in operation to prevent pre-exit
         })
+
     }
 }
 
