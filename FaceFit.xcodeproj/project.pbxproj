@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB2C8FC32732C05100A8B0E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FC22732C05100A8B0E1 /* AppDelegate.swift */; };
 		BB2C8FC52732C05100A8B0E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FC42732C05100A8B0E1 /* SceneDelegate.swift */; };
-		BB2C8FC72732C05100A8B0E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FC62732C05100A8B0E1 /* ViewController.swift */; };
+		BB2C8FC72732C05100A8B0E1 /* FaceFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FC62732C05100A8B0E1 /* FaceFitViewController.swift */; };
 		BB2C8FCA2732C05100A8B0E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2C8FC82732C05100A8B0E1 /* Main.storyboard */; };
 		BB2C8FCC2732C05300A8B0E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2C8FCB2732C05300A8B0E1 /* Assets.xcassets */; };
 		BB2C8FCF2732C05300A8B0E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2C8FCD2732C05300A8B0E1 /* LaunchScreen.storyboard */; };
@@ -43,7 +43,7 @@
 		BB2C8FBF2732C05100A8B0E1 /* FaceFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2C8FC22732C05100A8B0E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB2C8FC42732C05100A8B0E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB2C8FC62732C05100A8B0E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB2C8FC62732C05100A8B0E1 /* FaceFitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitViewController.swift; sourceTree = "<group>"; };
 		BB2C8FC92732C05100A8B0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB2C8FCB2732C05300A8B0E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB2C8FCE2732C05300A8B0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +84,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CBA264C27FE1E2400D10132 /* FaceFit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FaceFit;
+			sourceTree = "<group>";
+		};
 		BB2C8FB62732C05100A8B0E1 = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +114,10 @@
 		BB2C8FC12732C05100A8B0E1 /* FaceFit */ = {
 			isa = PBXGroup;
 			children = (
+				8CBA264C27FE1E2400D10132 /* FaceFit */,
 				BB2C8FC22732C05100A8B0E1 /* AppDelegate.swift */,
 				BB2C8FC42732C05100A8B0E1 /* SceneDelegate.swift */,
-				BB2C8FC62732C05100A8B0E1 /* ViewController.swift */,
+				BB2C8FC62732C05100A8B0E1 /* FaceFitViewController.swift */,
 				BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */,
 				BBA100FC273909CF0024978D /* JustMeshViewController.swift */,
 				BB2C8FF22732C9A600A8B0E1 /* ArFaceExercise.swift */,
@@ -270,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB2C8FC72732C05100A8B0E1 /* ViewController.swift in Sources */,
+				BB2C8FC72732C05100A8B0E1 /* FaceFitViewController.swift in Sources */,
 				BBA100FD273909CF0024978D /* JustMeshViewController.swift in Sources */,
 				BBF42CA52734D5B80076308E /* Extensions.swift in Sources */,
 				BB2C8FF52733B38500A8B0E1 /* ExerciseViewController.swift in Sources */,

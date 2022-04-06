@@ -8,7 +8,7 @@
 import UIKit
 import ARKit
 
-class ViewController: UIViewController {
+class FaceFitViewController: UIViewController {
     
     @IBOutlet var arView: ARSCNView!
     
@@ -181,7 +181,7 @@ class ViewController: UIViewController {
 
 
 // 1
-extension ViewController: ARSCNViewDelegate {
+extension FaceFitViewController: ARSCNViewDelegate {
     // 2
     
     // Adding a Mesh Mask
