@@ -14,67 +14,70 @@ class FaceFitViewController: UIViewController {
     
     var leftNames:[UILabel] = []
     var leftValues:[String:UILabel] = [:]
-    let leftKeys:[String] = [
-        "browDown_L",
-        "browOuterUp_L",
-        "cheekSquint_L",
-        "eyeBlink_L",
-        "eyeLookDown_L",
-        "eyeLookIn_L",
-        "eyeLookOut_L",
-        "eyeLookUp_L",
-        "eyeSquint_L",
-        "eyeWide_L",
-        "jawLeft",
-        "mouthDimple_L",
-        "mouthFrown_L",
-        "mouthLowerDown_L",
-        "mouthPress_L",
-        "mouthSmile_L",
-        "mouthStretch_L",
-        "mouthUpperUp_L",
-        "mouthLeft",
-        "noseSneer_L"]
+    let leftKeys:[String] = BlendShape.leftOnes
+//    [
+//        "browDown_L",
+//        "browOuterUp_L",
+//        "cheekSquint_L",
+//        "eyeBlink_L",
+//        "eyeLookDown_L",
+//        "eyeLookIn_L",
+//        "eyeLookOut_L",
+//        "eyeLookUp_L",
+//        "eyeSquint_L",
+//        "eyeWide_L",
+//        "jawLeft",
+//        "mouthDimple_L",
+//        "mouthFrown_L",
+//        "mouthLowerDown_L",
+//        "mouthPress_L",
+//        "mouthSmile_L",
+//        "mouthStretch_L",
+//        "mouthUpperUp_L",
+//        "mouthLeft",
+//        "noseSneer_L"]
     
     var rightNames:[UILabel] = []
     var rightValues:[String:UILabel] = [:]
-    let rightKeys:[String] = [
-        "browDown_R",
-        "browOuterUp_R",
-        "cheekSquint_R",
-        "eyeBlink_R",
-        "eyeLookDown_R",
-        "eyeLookIn_R",
-        "eyeLookOut_R",
-        "eyeLookUp_R",
-        "eyeSquint_R",
-        "eyeWide_R",
-        "jawRight",
-        "mouthDimple_R",
-        "mouthFrown_R",
-        "mouthLowerDown_R",
-        "mouthPress_R",
-        "mouthSmile_R",
-        "mouthStretch_R",
-        "mouthUpperUp_R",
-        "mouthRight",
-        "noseSneer_R"]
+    let rightKeys:[String] = BlendShape.rightOnes
+//    [
+//        "browDown_R",
+//        "browOuterUp_R",
+//        "cheekSquint_R",
+//        "eyeBlink_R",
+//        "eyeLookDown_R",
+//        "eyeLookIn_R",
+//        "eyeLookOut_R",
+//        "eyeLookUp_R",
+//        "eyeSquint_R",
+//        "eyeWide_R",
+//        "jawRight",
+//        "mouthDimple_R",
+//        "mouthFrown_R",
+//        "mouthLowerDown_R",
+//        "mouthPress_R",
+//        "mouthSmile_R",
+//        "mouthStretch_R",
+//        "mouthUpperUp_R",
+//        "mouthRight",
+//        "noseSneer_R"]
     
     var otherNames:[UILabel] = []
     var otherValues:[String:UILabel] = [:]
-    let otherKeys:[String] = [
-        "browInnerUp",
-        "cheekPuff",
-        "jawForward",
-        "jawOpen",
-        "mouthClose",
-        "mouthFunnel",
-        "mouthPucker",
-        "mouthRollLower",
-        "mouthRollUpper",
-        "mouthShrugLower",
-        "mouthShrugUpper",
-        "tongueOut"]
+    let otherKeys:[String] = BlendShape.otherOnes
+//    [
+//        "browInnerUp",
+//        "cheekPuff",
+//        "jawForward",
+//        "jawOpen",
+//        "mouthClose",
+//        "mouthFunnel",
+//        "mouthPucker",
+//        "mouthRollLower",
+//        "mouthRollUpper",
+//        "mouthShrugLower",
+//        "mouthShrugUpper",
+//        "tongueOut"]
     
     var allValues:[String:UILabel] = [:]
     

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C512E8328F0B84E00C15F74 /* FaceFitArStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C512E8228F0B84E00C15F74 /* FaceFitArStatus.swift */; };
+		8C56221528EF4B3D00458F99 /* FaceFitArRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56221428EF4B3D00458F99 /* FaceFitArRoutine.swift */; };
+		8C56221728EF4BB900458F99 /* FaceFitArExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56221628EF4BB900458F99 /* FaceFitArExercise.swift */; };
+		8C56221928EF4C0800458F99 /* BlendShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56221828EF4C0800458F99 /* BlendShapes.swift */; };
+		8C56221B28EF4CF600458F99 /* FaceFitArPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56221A28EF4CF600458F99 /* FaceFitArPose.swift */; };
+		8C56221D28EF4D3300458F99 /* FaceFitArMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56221C28EF4D3300458F99 /* FaceFitArMovement.swift */; };
 		BB2C8FC32732C05100A8B0E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FC22732C05100A8B0E1 /* AppDelegate.swift */; };
 		BB2C8FC52732C05100A8B0E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FC42732C05100A8B0E1 /* SceneDelegate.swift */; };
 		BB2C8FC72732C05100A8B0E1 /* FaceFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FC62732C05100A8B0E1 /* FaceFitViewController.swift */; };
@@ -18,7 +24,7 @@
 		BB2C8FE62732C05400A8B0E1 /* FaceFitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FE52732C05400A8B0E1 /* FaceFitUITestsLaunchTests.swift */; };
 		BB2C8FF52733B38500A8B0E1 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */; };
 		BBA100FD273909CF0024978D /* JustMeshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA100FC273909CF0024978D /* JustMeshViewController.swift */; };
-		BBF42CA52734D5B80076308E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF42CA42734D5B80076308E /* Extensions.swift */; };
+		BBF42CA52734D5B80076308E /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF42CA42734D5B80076308E /* ModelExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C512E8228F0B84E00C15F74 /* FaceFitArStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitArStatus.swift; sourceTree = "<group>"; };
+		8C56221428EF4B3D00458F99 /* FaceFitArRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitArRoutine.swift; sourceTree = "<group>"; };
+		8C56221628EF4BB900458F99 /* FaceFitArExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitArExercise.swift; sourceTree = "<group>"; };
+		8C56221828EF4C0800458F99 /* BlendShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendShapes.swift; sourceTree = "<group>"; };
+		8C56221A28EF4CF600458F99 /* FaceFitArPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitArPose.swift; sourceTree = "<group>"; };
+		8C56221C28EF4D3300458F99 /* FaceFitArMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitArMovement.swift; sourceTree = "<group>"; };
 		BB2C8FBF2732C05100A8B0E1 /* FaceFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2C8FC22732C05100A8B0E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB2C8FC42732C05100A8B0E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +66,7 @@
 		BB2C8FE52732C05400A8B0E1 /* FaceFitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		BBA100FC273909CF0024978D /* JustMeshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustMeshViewController.swift; sourceTree = "<group>"; };
-		BBF42CA42734D5B80076308E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BBF42CA42734D5B80076308E /* ModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +94,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8CBA264C27FE1E2400D10132 /* FaceFit */ = {
+		8C512E8128F0B62D00C15F74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB2C8FC82732C05100A8B0E1 /* Main.storyboard */,
+				BB2C8FCB2732C05300A8B0E1 /* Assets.xcassets */,
+				BB2C8FCD2732C05300A8B0E1 /* LaunchScreen.storyboard */,
 			);
-			path = FaceFit;
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C56221228EF4B0900458F99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C56221828EF4C0800458F99 /* BlendShapes.swift */,
+				8C56221C28EF4D3300458F99 /* FaceFitArMovement.swift */,
+				8C56221A28EF4CF600458F99 /* FaceFitArPose.swift */,
+				8C56221628EF4BB900458F99 /* FaceFitArExercise.swift */,
+				8C512E8228F0B84E00C15F74 /* FaceFitArStatus.swift */,
+				8C56221428EF4B3D00458F99 /* FaceFitArRoutine.swift */,
+				BBF42CA42734D5B80076308E /* ModelExtensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C56221328EF4B1A00458F99 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB2C8FC22732C05100A8B0E1 /* AppDelegate.swift */,
+				BB2C8FC42732C05100A8B0E1 /* SceneDelegate.swift */,
+				BB2C8FC62732C05100A8B0E1 /* FaceFitViewController.swift */,
+				BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */,
+				BBA100FC273909CF0024978D /* JustMeshViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		BB2C8FB62732C05100A8B0E1 = {
@@ -112,17 +153,10 @@
 		BB2C8FC12732C05100A8B0E1 /* FaceFit */ = {
 			isa = PBXGroup;
 			children = (
-				8CBA264C27FE1E2400D10132 /* FaceFit */,
-				BB2C8FC22732C05100A8B0E1 /* AppDelegate.swift */,
-				BB2C8FC42732C05100A8B0E1 /* SceneDelegate.swift */,
-				BB2C8FC62732C05100A8B0E1 /* FaceFitViewController.swift */,
-				BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */,
-				BBA100FC273909CF0024978D /* JustMeshViewController.swift */,
-				BB2C8FC82732C05100A8B0E1 /* Main.storyboard */,
-				BB2C8FCB2732C05300A8B0E1 /* Assets.xcassets */,
-				BB2C8FCD2732C05300A8B0E1 /* LaunchScreen.storyboard */,
+				8C56221228EF4B0900458F99 /* Model */,
+				8C56221328EF4B1A00458F99 /* Controller */,
+				8C512E8128F0B62D00C15F74 /* View */,
 				BB2C8FD02732C05300A8B0E1 /* Info.plist */,
-				BBF42CA42734D5B80076308E /* Extensions.swift */,
 			);
 			path = FaceFit;
 			sourceTree = "<group>";
@@ -275,10 +309,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C56221728EF4BB900458F99 /* FaceFitArExercise.swift in Sources */,
+				8C56221B28EF4CF600458F99 /* FaceFitArPose.swift in Sources */,
+				8C56221D28EF4D3300458F99 /* FaceFitArMovement.swift in Sources */,
+				8C56221928EF4C0800458F99 /* BlendShapes.swift in Sources */,
 				BB2C8FC72732C05100A8B0E1 /* FaceFitViewController.swift in Sources */,
+				8C512E8328F0B84E00C15F74 /* FaceFitArStatus.swift in Sources */,
 				BBA100FD273909CF0024978D /* JustMeshViewController.swift in Sources */,
-				BBF42CA52734D5B80076308E /* Extensions.swift in Sources */,
+				BBF42CA52734D5B80076308E /* ModelExtensions.swift in Sources */,
 				BB2C8FF52733B38500A8B0E1 /* ExerciseViewController.swift in Sources */,
+				8C56221528EF4B3D00458F99 /* FaceFitArRoutine.swift in Sources */,
 				BB2C8FC32732C05100A8B0E1 /* AppDelegate.swift in Sources */,
 				BB2C8FC52732C05100A8B0E1 /* SceneDelegate.swift in Sources */,
 			);
