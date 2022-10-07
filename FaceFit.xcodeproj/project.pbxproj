@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C512E8328F0B84E00C15F74 /* FaceFitArStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C512E8228F0B84E00C15F74 /* FaceFitArStatus.swift */; };
+		8C512E8528F0C78300C15F74 /* ArFaceExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C512E8428F0C78300C15F74 /* ArFaceExercise.swift */; };
 		8C56221528EF4B3D00458F99 /* FaceFitArRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56221428EF4B3D00458F99 /* FaceFitArRoutine.swift */; };
 		8C56221728EF4BB900458F99 /* FaceFitArExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56221628EF4BB900458F99 /* FaceFitArExercise.swift */; };
 		8C56221928EF4C0800458F99 /* BlendShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56221828EF4C0800458F99 /* BlendShapes.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		8C512E8228F0B84E00C15F74 /* FaceFitArStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitArStatus.swift; sourceTree = "<group>"; };
+		8C512E8428F0C78300C15F74 /* ArFaceExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArFaceExercise.swift; sourceTree = "<group>"; };
 		8C56221428EF4B3D00458F99 /* FaceFitArRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitArRoutine.swift; sourceTree = "<group>"; };
 		8C56221628EF4BB900458F99 /* FaceFitArExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitArExercise.swift; sourceTree = "<group>"; };
 		8C56221828EF4C0800458F99 /* BlendShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendShapes.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		8C56221228EF4B0900458F99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8C512E8428F0C78300C15F74 /* ArFaceExercise.swift */,
 				8C56221828EF4C0800458F99 /* BlendShapes.swift */,
 				8C56221C28EF4D3300458F99 /* FaceFitArMovement.swift */,
 				8C56221A28EF4CF600458F99 /* FaceFitArPose.swift */,
@@ -312,6 +315,7 @@
 				8C56221728EF4BB900458F99 /* FaceFitArExercise.swift in Sources */,
 				8C56221B28EF4CF600458F99 /* FaceFitArPose.swift in Sources */,
 				8C56221D28EF4D3300458F99 /* FaceFitArMovement.swift in Sources */,
+				8C512E8528F0C78300C15F74 /* ArFaceExercise.swift in Sources */,
 				8C56221928EF4C0800458F99 /* BlendShapes.swift in Sources */,
 				BB2C8FC72732C05100A8B0E1 /* FaceFitViewController.swift in Sources */,
 				8C512E8328F0B84E00C15F74 /* FaceFitArStatus.swift in Sources */,
