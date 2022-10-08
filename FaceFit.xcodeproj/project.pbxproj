@@ -16,7 +16,6 @@
 		BB2C8FDA2732C05400A8B0E1 /* FaceFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FD92732C05400A8B0E1 /* FaceFitTests.swift */; };
 		BB2C8FE42732C05400A8B0E1 /* FaceFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FE32732C05400A8B0E1 /* FaceFitUITests.swift */; };
 		BB2C8FE62732C05400A8B0E1 /* FaceFitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FE52732C05400A8B0E1 /* FaceFitUITestsLaunchTests.swift */; };
-		BB2C8FF32732C9A600A8B0E1 /* ArFaceExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FF22732C9A600A8B0E1 /* ArFaceExercise.swift */; };
 		BB2C8FF52733B38500A8B0E1 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */; };
 		BBA100FD273909CF0024978D /* JustMeshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA100FC273909CF0024978D /* JustMeshViewController.swift */; };
 		BBF42CA52734D5B80076308E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF42CA42734D5B80076308E /* Extensions.swift */; };
@@ -53,7 +52,6 @@
 		BB2C8FDF2732C05400A8B0E1 /* FaceFitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceFitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2C8FE32732C05400A8B0E1 /* FaceFitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitUITests.swift; sourceTree = "<group>"; };
 		BB2C8FE52732C05400A8B0E1 /* FaceFitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFitUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BB2C8FF22732C9A600A8B0E1 /* ArFaceExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArFaceExercise.swift; sourceTree = "<group>"; };
 		BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		BBA100FC273909CF0024978D /* JustMeshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustMeshViewController.swift; sourceTree = "<group>"; };
 		BBF42CA42734D5B80076308E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				BB2C8FC62732C05100A8B0E1 /* FaceFitViewController.swift */,
 				BB2C8FF42733B38400A8B0E1 /* ExerciseViewController.swift */,
 				BBA100FC273909CF0024978D /* JustMeshViewController.swift */,
-				BB2C8FF22732C9A600A8B0E1 /* ArFaceExercise.swift */,
 				BB2C8FC82732C05100A8B0E1 /* Main.storyboard */,
 				BB2C8FCB2732C05300A8B0E1 /* Assets.xcassets */,
 				BB2C8FCD2732C05300A8B0E1 /* LaunchScreen.storyboard */,
@@ -282,7 +279,6 @@
 				BBA100FD273909CF0024978D /* JustMeshViewController.swift in Sources */,
 				BBF42CA52734D5B80076308E /* Extensions.swift in Sources */,
 				BB2C8FF52733B38500A8B0E1 /* ExerciseViewController.swift in Sources */,
-				BB2C8FF32732C9A600A8B0E1 /* ArFaceExercise.swift in Sources */,
 				BB2C8FC32732C05100A8B0E1 /* AppDelegate.swift in Sources */,
 				BB2C8FC52732C05100A8B0E1 /* SceneDelegate.swift in Sources */,
 			);
