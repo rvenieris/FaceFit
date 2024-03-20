@@ -11,6 +11,7 @@ import ARKit
 class JustMeshViewController: UIViewController {
     
     @IBOutlet var arView: ARSCNView!
+    var labels:[SCNNode] = []
 
     
     override func viewDidLoad() {
@@ -66,12 +67,14 @@ extension JustMeshViewController: ARSCNViewDelegate {
             let faceGeometry = node.geometry as? ARSCNFaceGeometry
         else { return }
         faceGeometry.update(from: faceAnchor.geometry)
-//        printVertices(faceAnchor: faceAnchor, in: node, addLabel: false)
+        printVertices(faceAnchor: faceAnchor, in: node, addLabel: false)
     }
+    
     
     func printVertices(faceAnchor: ARFaceAnchor, in node: SCNNode, addLabel:Bool = true) {
         for index in 0..<faceAnchor.geometry.vertices.count{
 //            guard [1076, 1096].contains(index) else {continue}
+//            guard index%2 == 0 else {continue}
             if addLabel {
                 let text = SCNText(string: String(index), extrusionDepth: 4)
                 let material = SCNMaterial()
@@ -81,11 +84,14 @@ extension JustMeshViewController: ARSCNViewDelegate {
                 
                 let newNode = SCNNode()
                 newNode.position =  SCNVector3Make(faceAnchor.geometry.vertices[index].x*1.0,faceAnchor.geometry.vertices[index].y*1.0,faceAnchor.geometry.vertices[index].z)
-                newNode.scale = SCNVector3(x:0.00025, y:0.00025, z:0.0001)
+                newNode.scale = SCNVector3(x:0.0005, y:0.0005, z:0.001)
                 newNode.geometry = text
                 node.addChildNode(newNode)
+                labels.append(newNode)
             } else {
-                print(SCNVector3Make(faceAnchor.geometry.vertices[index].x*1.0,faceAnchor.geometry.vertices[index].y*1.0,faceAnchor.geometry.vertices[index].z))
+                let position = SCNVector3Make(faceAnchor.geometry.vertices[index].x*1.0,faceAnchor.geometry.vertices[index].y*1.0,faceAnchor.geometry.vertices[index].z)
+                labels[index].position = position
+//                print()
             }
         }
     }
