@@ -50,10 +50,12 @@ class JustMeshViewController: UIViewController {
 extension JustMeshViewController: ARSCNViewDelegate {
     // Adding a Mesh Mask
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        guard let device = arView.device else { return nil }
-        let faceGeometry = ARSCNFaceGeometry(device: device)
+        guard let device = arView.device,
+              let faceAnchor = anchor as? ARFaceAnchor,
+              let faceGeometry = ARSCNFaceGeometry(device: device) else { return nil }
         let node = SCNNode(geometry: faceGeometry)
         node.geometry?.firstMaterial?.fillMode = .lines
+        printVertices(faceAnchor: faceAnchor, in: node)
         return node
     }
     
@@ -64,21 +66,27 @@ extension JustMeshViewController: ARSCNViewDelegate {
             let faceGeometry = node.geometry as? ARSCNFaceGeometry
         else { return }
         faceGeometry.update(from: faceAnchor.geometry)
-        printVertices(faceAnchor: faceAnchor, in: node)
+//        printVertices(faceAnchor: faceAnchor, in: node, addLabel: false)
     }
     
-    func printVertices(faceAnchor: ARFaceAnchor, in node: SCNNode) {
+    func printVertices(faceAnchor: ARFaceAnchor, in node: SCNNode, addLabel:Bool = true) {
         for index in 0..<faceAnchor.geometry.vertices.count{
+//            guard [1076, 1096].contains(index) else {continue}
+            if addLabel {
                 let text = SCNText(string: String(index), extrusionDepth: 4)
                 let material = SCNMaterial()
                 material.diffuse.contents = UIColor.green
                 material.specular.contents = UIColor.green
                 text.materials = [material]
+                
                 let newNode = SCNNode()
                 newNode.position =  SCNVector3Make(faceAnchor.geometry.vertices[index].x*1.0,faceAnchor.geometry.vertices[index].y*1.0,faceAnchor.geometry.vertices[index].z)
                 newNode.scale = SCNVector3(x:0.00025, y:0.00025, z:0.0001)
                 newNode.geometry = text
                 node.addChildNode(newNode)
+            } else {
+                print(SCNVector3Make(faceAnchor.geometry.vertices[index].x*1.0,faceAnchor.geometry.vertices[index].y*1.0,faceAnchor.geometry.vertices[index].z))
             }
+        }
     }
 }
