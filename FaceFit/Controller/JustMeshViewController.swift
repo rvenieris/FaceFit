@@ -11,7 +11,13 @@ import ARKit
 class JustMeshViewController: UIViewController {
     
     @IBOutlet var arView: ARSCNView!
-    var labels:[SCNNode] = []
+    var labels:[Int:SCNNode] = [:]
+    var scale: CGFloat = 1
+    var initialScale: CGFloat = 1
+    var faceNode = SCNNode()
+    var translation:CGPoint = .zero
+    var initialTranslation:CGPoint = .zero
+
 
     
     override func viewDidLoad() {
@@ -31,6 +37,8 @@ class JustMeshViewController: UIViewController {
         let configuration = ARFaceTrackingConfiguration()
         arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
         
+        enableZoom()
+        enablePan()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,6 +53,51 @@ class JustMeshViewController: UIViewController {
         super.viewWillDisappear(animated)
         arView.session.pause()
     }
+    
+    func enableZoom() {
+        let gesture = UIPinchGestureRecognizer(target: self, action: #selector(startZooming(_:)))
+        arView.isUserInteractionEnabled = true
+        arView.addGestureRecognizer(gesture)
+      }
+
+    func enablePan() {
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(startPanning(_:)))
+        arView.isUserInteractionEnabled = true
+        arView.addGestureRecognizer(gesture)
+      }
+
+      @objc private func startZooming(_ sender: UIPinchGestureRecognizer) {
+          
+          switch sender.state {
+              
+          case .began:
+              initialScale = scale
+          case .changed:
+              scale = initialScale * sender.scale
+          case .ended:
+              initialScale = scale
+          default:
+              break
+          }
+      }
+    
+    @objc private func startPanning(_ sender: UIPanGestureRecognizer) {
+        
+        let senderTranslation = sender.translation(in: arView)
+        
+        switch sender.state {
+            
+        case .began:
+            initialTranslation = translation
+        case .changed:
+            translation.x = initialTranslation.x + senderTranslation.x
+            translation.y = initialTranslation.y + senderTranslation.y
+        default:
+            break
+        }
+    }
+    
+    
 }
 
 
@@ -54,10 +107,10 @@ extension JustMeshViewController: ARSCNViewDelegate {
         guard let device = arView.device,
               let faceAnchor = anchor as? ARFaceAnchor,
               let faceGeometry = ARSCNFaceGeometry(device: device) else { return nil }
-        let node = SCNNode(geometry: faceGeometry)
-        node.geometry?.firstMaterial?.fillMode = .lines
-        printVertices(faceAnchor: faceAnchor, in: node)
-        return node
+        faceNode = SCNNode(geometry: faceGeometry)
+        faceNode.geometry?.firstMaterial?.fillMode = .lines
+        printVertices(faceAnchor: faceAnchor, in: faceNode)
+        return faceNode
     }
     
     // Updating the Mesh Mask
@@ -66,6 +119,10 @@ extension JustMeshViewController: ARSCNViewDelegate {
             let faceAnchor = anchor as? ARFaceAnchor,
             let faceGeometry = node.geometry as? ARSCNFaceGeometry
         else { return }
+        node.scale = SCNVector3(scale, scale, scale)
+        node.position.x += Float(translation.x)/1000
+        node.position.y -= Float(translation.y)/1000
+
         faceGeometry.update(from: faceAnchor.geometry)
         printVertices(faceAnchor: faceAnchor, in: node, addLabel: false)
     }
@@ -73,10 +130,10 @@ extension JustMeshViewController: ARSCNViewDelegate {
     
     func printVertices(faceAnchor: ARFaceAnchor, in node: SCNNode, addLabel:Bool = true) {
         for index in 0..<faceAnchor.geometry.vertices.count{
-//            guard [1076, 1096].contains(index) else {continue}
-//            guard index%2 == 0 else {continue}
+//            guard [236, 460, 1076, 1096].contains(index) else {continue}
+//            guard index%4 == 0 else {continue}
             if addLabel {
-                let text = SCNText(string: String(index), extrusionDepth: 4)
+                let text = SCNText(string: String(index), extrusionDepth: 2)
                 let material = SCNMaterial()
                 material.diffuse.contents = UIColor.green
                 material.specular.contents = UIColor.green
@@ -84,13 +141,14 @@ extension JustMeshViewController: ARSCNViewDelegate {
                 
                 let newNode = SCNNode()
                 newNode.position =  SCNVector3Make(faceAnchor.geometry.vertices[index].x*1.0,faceAnchor.geometry.vertices[index].y*1.0,faceAnchor.geometry.vertices[index].z)
-                newNode.scale = SCNVector3(x:0.0005, y:0.0005, z:0.001)
+                newNode.scale = SCNVector3(x:0.00025, y:0.00025, z:0.0001)
                 newNode.geometry = text
                 node.addChildNode(newNode)
-                labels.append(newNode)
+                labels[index] = newNode
             } else {
                 let position = SCNVector3Make(faceAnchor.geometry.vertices[index].x*1.0,faceAnchor.geometry.vertices[index].y*1.0,faceAnchor.geometry.vertices[index].z)
-                labels[index].position = position
+//                print("Vertice \(index) = ", position)
+                labels[index]?.position = position
 //                print()
             }
         }
