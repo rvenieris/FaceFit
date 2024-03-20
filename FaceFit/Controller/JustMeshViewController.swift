@@ -64,5 +64,21 @@ extension JustMeshViewController: ARSCNViewDelegate {
             let faceGeometry = node.geometry as? ARSCNFaceGeometry
         else { return }
         faceGeometry.update(from: faceAnchor.geometry)
+        printVertices(faceAnchor: faceAnchor, in: node)
+    }
+    
+    func printVertices(faceAnchor: ARFaceAnchor, in node: SCNNode) {
+        for index in 0..<faceAnchor.geometry.vertices.count{
+                let text = SCNText(string: String(index), extrusionDepth: 4)
+                let material = SCNMaterial()
+                material.diffuse.contents = UIColor.green
+                material.specular.contents = UIColor.green
+                text.materials = [material]
+                let newNode = SCNNode()
+                newNode.position =  SCNVector3Make(faceAnchor.geometry.vertices[index].x*1.0,faceAnchor.geometry.vertices[index].y*1.0,faceAnchor.geometry.vertices[index].z)
+                newNode.scale = SCNVector3(x:0.00025, y:0.00025, z:0.0001)
+                newNode.geometry = text
+                node.addChildNode(newNode)
+            }
     }
 }
